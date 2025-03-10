@@ -1,9 +1,11 @@
 return {
 
   "neo-tree.nvim",
-  dep_of = { "plenary.nvim", "nui.nvim", "nvim-web-devicons" },
-  event = "DeferredUIEnter",
+  keys = {
+    -- Create a key mapping and lazy-load when it is used
+    { "<leader>n", "<CMD>Neotree toggle<CR>", desc = "NeoTree toggle" },
+  },
   after = function()
-    vim.keymap.set("n", "<leader>n", "<CMD>Neotree filesystem reveal left<CR>", { desc = "Neotree Open Left Side" })
+    require("neo-tree").setup()
   end,
 }

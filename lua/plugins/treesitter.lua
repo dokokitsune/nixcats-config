@@ -1,6 +1,5 @@
 return {
   "nvim-treesitter",
-  build = ":TSUpdate",
   event = "DeferredUIEnter",
   after = function()
     local config = require("nvim-treesitter.configs")

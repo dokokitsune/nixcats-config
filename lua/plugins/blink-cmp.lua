@@ -16,7 +16,7 @@ return {
           ['C-k'] = { 'select_prev', 'fallback' },
           ['<C-j>'] = { 'select_next', 'fallback' },
           ['<CR>'] = { 'select_and_accept', 'fallback' },
-          ['<leader>k'] = {'show_documentation', 'fallback'},
+          ['<leader>k'] = { 'show_documentation', 'fallback' },
         },
         appearance = {
 
@@ -30,6 +30,10 @@ return {
           keyword = { range = "prefix" },
           list = { selection = { preselect = true, auto_insert = true } },
           ghost_text = { enabled = true },
+          window = { border = "rounded" },
+        },
+        documentation = {
+          enabled = true
         },
 
         snippets = { preset = "luasnip" },
