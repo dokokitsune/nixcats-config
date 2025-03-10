@@ -4,9 +4,10 @@ require("lze").load {
   { import = "plugins.neo-tree" },
   { import = "plugins.blink-cmp" },
   { import = "plugins.lsp" },
-  { import = "plugins.plentry" },
+  { import = "plugins.plenary" },
   { import = "plugins.treesitter" },
   { import = "plugins.nonels" },
+  { import = "plugins.telescope" },
 
 
 
