@@ -9,7 +9,7 @@ require("lze").load {
   { import = "plugins.nonels" },
   { import = "plugins.telescope" },
 
-
+  { import = "plugins.notify" },
 
 
 
