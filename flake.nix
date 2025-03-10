@@ -181,6 +181,7 @@
             nvim-treesitter-context
             nui-nvim
             which-key-nvim
+            nvim-autopairs
           ];
         };
 
