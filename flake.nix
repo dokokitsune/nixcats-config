@@ -164,6 +164,7 @@
           general = with pkgs.vimPlugins; [
 
             lualine-nvim
+            neo-tree-nvim
             nvim-notify
             telescope-nvim
             telescope-ui-select-nvim

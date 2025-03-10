@@ -1,5 +1,5 @@
 require("lze").load {
-
+  { import = "plugins.neo-tree" },
   { import = "plugins.tokyonight" },
   { import = "plugins.lualine" },
   { import = "plugins.blink-cmp" },

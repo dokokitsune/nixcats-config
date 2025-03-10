@@ -3,7 +3,7 @@ return {
   lazy = false,
   after = function()
     require("snacks").setup({
-      explorer = { enabled = true },
+
 
       scroll = { enabled = true },
       indent = {
@@ -14,9 +14,6 @@ return {
       scope = { enabled = true },
     })
     --Keybinds for Snacks
-    vim.keymap.set("n", "<leader>n", function()
-      Snacks.explorer.open()
-    end, { desc = "Explorer" })
   end
 
 
