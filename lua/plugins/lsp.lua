@@ -28,6 +28,7 @@ servers.lua_ls = {
   filetypes = { "lua" },
 }
 
+ 
 return {
   "nvim-lspconfig",
   event = { "BufReadPost", "BufNewFile" },

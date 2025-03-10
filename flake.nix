@@ -101,6 +101,7 @@
           general = with pkgs; [
             # Runtime Deps
             ripgrep
+            fd
 
             #Lua
             lua-language-server

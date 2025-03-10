@@ -1,6 +1,7 @@
 return {
   {
     "telescope.nvim",
+    dep_of = {"nvim-web-devicons"},
     event = "DeferredUIEnter",
     after = function()
       local builtin = require('telescope.builtin')
