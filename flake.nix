@@ -171,6 +171,7 @@
             none-ls-nvim
             nvim-lspconfig
             nvim-web-devicons
+            snacks-nvim
             nvim-treesitter
             nvim-treesitter-textobjects
             nvim-treesitter-context

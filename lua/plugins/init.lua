@@ -8,7 +8,7 @@ require("lze").load {
   { import = "plugins.treesitter" },
   { import = "plugins.nonels" },
   { import = "plugins.telescope" },
-
+  { import = "plugins.snacks" },
   { import = "plugins.notify" },
 
 
