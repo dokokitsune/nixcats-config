@@ -1,6 +1,6 @@
 return {
   "none-ls.nvim",
-  event = "DefferedUIEnter",
+  event = "DeferredUIEnter",
   after = function()
     local nonels = require("null-ls")
     nonels.setup({
@@ -13,7 +13,8 @@ return {
 
       --TS/JS
       nonels.builtins.formatting.prettierd,
-      require("none-ls.diagnostics.eslint_d"),
+    --  require("none-ls.diagnostics.eslint_d"),
+      
 
       --Yaml
       nonels.builtins.diagnostics.yamllint,

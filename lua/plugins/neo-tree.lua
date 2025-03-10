@@ -1,9 +1,9 @@
 return {
+
   "neo-tree.nvim",
-  keys = {
-    { "<leader>n", "<CMD>Neotree toggle", desc = "NeoTree toggle" },
-  },
+  dep_of = { "nui.nvim" },
+  event = "DeferredUIEnter",
   after = function()
-    require("neo-tree").setup()
+    vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>", { desc = "Neotree Open Left Side" })
   end,
 }

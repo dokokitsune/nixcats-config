@@ -128,12 +128,12 @@
             taplo
 
             #Terraform
-            terraformls
+            terraform-ls
             tflint
 
             #TS/JS Json, HTML, CSS 
             typescript-language-server
-            fsouza-prettierd
+            prettierd
             eslint_d
 
             #Markdown
@@ -160,7 +160,7 @@
           general = with pkgs.vimPlugins; [
 
             lualine-nvim
-            neotree-nvim
+            neo-tree-nvim
             nvim-notify
             telescope-nvim
             luasnip

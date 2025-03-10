@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 
-vim.o.colorscheme("tokyonight-night")
+vim.cmd.colorscheme("tokyonight-night")
 vim.wo.number = true
 vim.wo.relativenumber = true
 
