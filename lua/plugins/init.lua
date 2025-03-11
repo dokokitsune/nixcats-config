@@ -9,7 +9,7 @@ require("lze").load {
   { import = "plugins.telescope" },
   { import = "plugins.snacks" },
   { import = "plugins.notify" },
-
+  { import = "plugins.nvim-autopairs" },
   { import = "plugins.neo-tree" },
 
 

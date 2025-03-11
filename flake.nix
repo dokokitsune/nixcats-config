@@ -26,7 +26,7 @@
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
     };
-
+    
     # neovim-nightly-overlay = {
     #   url = "github:nix-community/neovim-nightly-overlay";
     # };
@@ -109,7 +109,7 @@
             #Lua
             lua-language-server
             stylua
-
+            
 
             #Python
             pyright
@@ -172,6 +172,8 @@
             lazygit-nvim
             plenary-nvim
             blink-cmp
+
+            nui-nvim
             none-ls-nvim
             nvim-lspconfig
             nvim-web-devicons
@@ -179,7 +181,6 @@
             nvim-treesitter
             nvim-treesitter-textobjects
             nvim-treesitter-context
-            nui-nvim
             which-key-nvim
             nvim-autopairs
           ];
@@ -285,6 +286,7 @@
           packages = utils.mkAllWithDefault defaultPackage;
 
           # choose your package for devShell
+
           # and add whatever else you want in it.
           devShells = {
             default = pkgs.mkShell {

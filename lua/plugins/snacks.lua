@@ -12,8 +12,13 @@ return {
         only_current = true,
       },
       scope = { enabled = true },
+      lazygit = { enabled = true },
+
     })
-    --Keybinds for Snacks
+    --Keybinds for snacks
+    vim.keymap.set("n", "<leader>lg", function()
+      Snacks.lazygit.open()
+    end, { desc = "Opens LazyGit" })
   end
 
 

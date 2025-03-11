@@ -28,7 +28,15 @@ servers.lua_ls = {
   filetypes = { "lua" },
 }
 
- 
+servers.nixd = {}
+
+servers.nil_ls = {}
+
+servers.terraformls = {}
+
+servers.ts_ls = {}
+servers.marksman = {}
+
 return {
   "nvim-lspconfig",
   event = { "BufReadPost", "BufNewFile" },

@@ -19,3 +19,5 @@ vim.o.syntax = "on"
 vim.o.ruler = false
 vim.o.showcmd = true
 vim.o.cmdheight = 0
+
+vim.opt.swapfile = false -- don't use swapfiles
