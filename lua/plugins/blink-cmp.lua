@@ -29,9 +29,10 @@ return {
         completion = {
           keyword = { range = "prefix" },
           list = { selection = { preselect = true, auto_insert = true } },
-          ghost_text = { enabled = true },
         },
         snippets = { preset = "luasnip" },
+
+        signature = { enabled = true}
 
 
       })

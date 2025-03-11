@@ -35,6 +35,8 @@ servers.nil_ls = {}
 servers.terraformls = {}
 
 servers.ts_ls = {}
+servers.tflint = {}
+
 servers.marksman = {}
 
 return {
