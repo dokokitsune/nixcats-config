@@ -1,12 +1,13 @@
 return {
-
   "neo-tree.nvim",
-  event = "DeferredUIEnter",
-  keys = {
-    -- Create a key mapping and lazy-load when it is used
-    { "<leader>n", "<CMD>Neotree toggle<CR>", desc = "NeoTree toggle" },
-  },
   after = function()
-    require("neo-tree").setup({})
+    require("neo-tree").setup()
+    vim.keymap.set("n", "<leader>ee", "<Cmd>Neotree toggle<CR>", { desc = "Toggle Neotree" })
+    vim.keymap.set(
+      "n",
+      "<leader>ef",
+      "<Cmd>Neotree filesystem reveal left<CR>",
+      { desc = "Toggle Neotree on current location" }
+    )
   end,
 }

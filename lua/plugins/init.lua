@@ -1,4 +1,4 @@
-require("lze").load {
+require("lze").load({
   { import = "plugins.tokyonight" },
   { import = "plugins.lualine" },
   { import = "plugins.blink-cmp" },
@@ -10,8 +10,7 @@ require("lze").load {
   { import = "plugins.snacks" },
   { import = "plugins.notify" },
   { import = "plugins.nvim-autopairs" },
-  { import = "plugins.neo-tree" },
-
-
-
-}
+  --   { import = "plugins.neo-tree" },
+  { import = "plugins.oil" },
+  { import = "plugins.yazi" },
+})
