@@ -44,12 +44,14 @@ return {
   event = { "BufReadPost", "BufNewFile" },
   cmd = { "LspInfo", "LspInstall", "LspUninstall" },
   after = function()
-    local lspconfig = require('lspconfig')
-    for server, config in pairs(servers) do
-      -- passing config.capabilities to blink.cmp merges with the capabilities in your
-      -- `opts[server].capabilities, if you've defined it
-      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-      lspconfig[server].setup(config)
+    for server_name, config in pairs(servers) do
+        require("lspconfig")[server_name].setup({
+          capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities),
+          settings = config,
+          filetypes = (config or {}).filetypes,
+          cmd = (config or {}).cmd,
+          root_pattern = (config or {}).root_pattern
+        })
     end
   end
 }

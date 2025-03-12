@@ -178,7 +178,7 @@
           optionalPlugins = {
             gitPlugins = with pkgs.neovimPlugins; [ ];
             general = with pkgs.vimPlugins; [
-              
+
               yazi-nvim
               lualine-nvim
               neo-tree-nvim
