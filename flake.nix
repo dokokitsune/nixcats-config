@@ -123,6 +123,7 @@
               ripgrep
               fd
               yazi
+              wl-clipboard
 
               #Lua
               lua-language-server
@@ -200,6 +201,8 @@
               nvim-treesitter-context
               which-key-nvim
               nvim-autopairs
+              trouble-nvim
+              otter-nvim
             ];
           };
 

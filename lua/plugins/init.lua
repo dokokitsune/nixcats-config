@@ -10,7 +10,8 @@ require("lze").load({
   { import = "plugins.snacks" },
   { import = "plugins.notify" },
   { import = "plugins.nvim-autopairs" },
-  --   { import = "plugins.neo-tree" },
   { import = "plugins.oil" },
   { import = "plugins.yazi" },
+  { import = "plugins.trouble" },
+  { import = "plugins.otter" },
 })

@@ -36,8 +36,9 @@ servers.terraformls = {}
 
 servers.ts_ls = {}
 servers.tflint = {}
-
+servers.taplo = {}
 servers.marksman = {}
+servers.yamlls = {}
 
 return {
   "nvim-lspconfig",
@@ -53,5 +54,6 @@ return {
           root_pattern = (config or {}).root_pattern
         })
     end
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Code" })
   end
 }
