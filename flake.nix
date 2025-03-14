@@ -155,6 +155,7 @@
 
               #TS/JS Json, HTML, CSS
               typescript-language-server
+              vscode-langservers-extracted
               prettierd
               eslint_d
 

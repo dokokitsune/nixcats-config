@@ -39,7 +39,7 @@ servers.tflint = {}
 servers.taplo = {}
 servers.marksman = {}
 servers.yamlls = {}
-
+servers.cssls = {}
 return {
   "nvim-lspconfig",
   event = { "BufReadPost", "BufNewFile" },
