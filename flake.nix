@@ -159,9 +159,13 @@
               prettierd
               eslint_d
 
+              #Docker
+              dockerfile-language-server-nodejs
+              dockfmt
+
               #Markdown
               marksman
-              ltex-ls
+              ltex-ls-plus
 
             ];
           };

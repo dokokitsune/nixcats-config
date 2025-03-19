@@ -33,11 +33,28 @@ servers.nixd = {}
 servers.nil_ls = {}
 
 servers.terraformls = {}
-
+servers.dockerls = {
+  settings = {
+    docker = {
+      languageserver = {
+        formatter = {
+          ignoreMultilineInstructions = true,
+        },
+      },
+    },
+  },
+}
 servers.ts_ls = {}
 servers.tflint = {}
 servers.taplo = {}
-servers.marksman = {}
+-- servers.marksman = {}
+servers.ltex_plus = {
+  settings = {
+    ltex = {
+      language = "en-US",
+    },
+  },
+}
 servers.yamlls = {}
 servers.cssls = {}
 return {
@@ -46,14 +63,14 @@ return {
   cmd = { "LspInfo", "LspInstall", "LspUninstall" },
   after = function()
     for server_name, config in pairs(servers) do
-        require("lspconfig")[server_name].setup({
-          capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities),
-          settings = config,
-          filetypes = (config or {}).filetypes,
-          cmd = (config or {}).cmd,
-          root_pattern = (config or {}).root_pattern
-        })
+      require("lspconfig")[server_name].setup({
+        capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities),
+        settings = config,
+        filetypes = (config or {}).filetypes,
+        cmd = (config or {}).cmd,
+        root_pattern = (config or {}).root_pattern,
+      })
     end
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Code" })
-  end
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Code" })
+  end,
 }
