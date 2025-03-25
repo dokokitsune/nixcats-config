@@ -208,6 +208,7 @@
               nvim-autopairs
               trouble-nvim
               otter-nvim
+              obsidian-nvim
             ];
           };
 
