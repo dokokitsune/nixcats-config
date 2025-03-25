@@ -16,4 +16,5 @@ require("lze").load({
   { import = "plugins.otter" },
   { import = "plugins.nvim-colorizer" },
   { import = "plugins.git" },
+  { import = "plugins.obsidian" },
 })
