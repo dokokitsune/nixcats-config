@@ -211,6 +211,7 @@
               trouble-nvim
               otter-nvim
               nvim-colorizer-lua
+              obsidian-nvim
             ];
           };
 
