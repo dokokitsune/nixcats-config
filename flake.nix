@@ -124,6 +124,7 @@
               fd
               yazi
               wl-clipboard
+              lazygit 
 
               #Lua
               lua-language-server
@@ -181,11 +182,12 @@
 
           # not loaded automatically at startup.
           # use with packadd and an autocommand in config to achieve lazy loading
-          optionalPlugins = {
+          optionalPlugins = { 
             gitPlugins = with pkgs.neovimPlugins; [ ];
             general = with pkgs.vimPlugins; [
 
               yazi-nvim
+              git-blame-nvim
               lualine-nvim
               neo-tree-nvim
               nvim-notify
@@ -208,6 +210,7 @@
               nvim-autopairs
               trouble-nvim
               otter-nvim
+              nvim-colorizer-lua
             ];
           };
 

@@ -14,4 +14,6 @@ require("lze").load({
   { import = "plugins.yazi" },
   { import = "plugins.trouble" },
   { import = "plugins.otter" },
+  { import = "plugins.nvim-colorizer" },
+  { import = "plugins.git" },
 })
