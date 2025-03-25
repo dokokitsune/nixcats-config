@@ -5,6 +5,6 @@ return {
   ft = "markdown",
 
   after = function()
-    require("obisdian")()
+    require("obsidian")()
   end,
 }
