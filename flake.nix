@@ -212,6 +212,7 @@
               otter-nvim
               nvim-colorizer-lua
               obsidian-nvim
+              markview-nvim
             ];
           };
 
