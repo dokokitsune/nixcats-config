@@ -17,4 +17,5 @@ require("lze").load({
   { import = "plugins.nvim-colorizer" },
   { import = "plugins.git" },
   { import = "plugins.obsidian" },
+  {import = "plugins.which-key"}
 })

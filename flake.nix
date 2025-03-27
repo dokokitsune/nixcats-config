@@ -213,6 +213,7 @@
               nvim-colorizer-lua
               obsidian-nvim
               markview-nvim
+              which-key-nvim 
             ];
           };
 
