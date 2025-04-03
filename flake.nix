@@ -216,6 +216,7 @@
               obsidian-nvim
               markview-nvim
               which-key-nvim
+              urlview-nvim
             ];
           };
 
