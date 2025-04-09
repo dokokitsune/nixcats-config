@@ -205,7 +205,7 @@
               nvim-lspconfig
               nvim-web-devicons
               snacks-nvim
-              nvim-treesitter
+              nvim-treesitter.withAllGrammars
               nvim-treesitter-textobjects
               nvim-treesitter-context
               which-key-nvim
@@ -216,7 +216,9 @@
               obsidian-nvim
               markview-nvim
               which-key-nvim
-              urlview-nvim
+              url-open
+              vim-startuptime
+              dashboard-nvim
             ];
           };
 
