@@ -58,19 +58,22 @@ servers.ltex_plus = {
 servers.yamlls = {}
 servers.cssls = {}
 return {
-  "nvim-lspconfig",
-  event = { "BufReadPost", "BufNewFile" },
-  cmd = { "LspInfo", "LspInstall", "LspUninstall" },
-  after = function()
-    for server_name, config in pairs(servers) do
-      require("lspconfig")[server_name].setup({
-        capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities),
-        settings = config,
-        filetypes = (config or {}).filetypes,
-        cmd = (config or {}).cmd,
-        root_pattern = (config or {}).root_pattern,
-      })
-    end
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Code" })
-  end,
+
+  {
+    "nvim-lspconfig",
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "LspInfo", "LspInstall", "LspUninstall" },
+    after = function()
+      for server_name, config in pairs(servers) do
+        require("lspconfig")[server_name].setup({
+          capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities),
+          settings = config,
+          filetypes = (config or {}).filetypes,
+          cmd = (config or {}).cmd,
+          root_pattern = (config or {}).root_pattern,
+        })
+      end
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Code" })
+    end,
+  },
 }
