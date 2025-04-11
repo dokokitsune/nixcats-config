@@ -146,6 +146,8 @@
 
               #Yaml
               yaml-language-server
+              vscode-extensions.redhat.ansible
+              ansible-lint
               yamlfmt
               yamllint
 

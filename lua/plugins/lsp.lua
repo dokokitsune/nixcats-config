@@ -33,6 +33,7 @@ servers.nixd = {}
 servers.nil_ls = {}
 
 servers.terraformls = {}
+servers.ansiblels = {}
 servers.dockerls = {
   settings = {
     docker = {
