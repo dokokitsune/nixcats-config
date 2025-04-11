@@ -28,6 +28,8 @@ servers.lua_ls = {
   filetypes = { "lua" },
 }
 
+servers.bashls = {}
+
 servers.nixd = {}
 
 servers.nil_ls = {}

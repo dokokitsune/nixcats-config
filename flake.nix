@@ -127,6 +127,9 @@
               fzf
               wl-clipboard
               lazygit
+              
+              #Bash
+              bash-language-server
 
               #Lua
               lua-language-server
