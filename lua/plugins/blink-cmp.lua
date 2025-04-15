@@ -6,7 +6,7 @@ return {
 
   {
     "blink.cmp",
-    version = "*",
+    version = "1.*",
     dep_of = { "nvim-lspconfig" },
     after = function()
       require("blink.cmp").setup({
@@ -25,10 +25,12 @@ return {
         sources = {
           default = { "lsp", "path", "snippets", "buffer" },
         },
-        
+
         completion = {
           keyword = { range = "prefix" },
-          menu = { draw = { columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } } } },
+          menu = {
+            draw = { columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } } },
+          },
           list = { selection = { preselect = true, auto_insert = true } },
         },
         snippets = { preset = "luasnip" },

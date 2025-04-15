@@ -35,7 +35,6 @@ servers.nixd = {}
 servers.nil_ls = {}
 
 servers.terraformls = {}
-servers.ansiblels = {}
 servers.dockerls = {
   settings = {
     docker = {
@@ -58,11 +57,23 @@ servers.ltex_plus = {
     },
   },
 }
+servers.helmls = {}
 servers.yamlls = {
   settings = {
     yaml = {
       schemas = {
-        kubernetes = "*.yaml",
+        -- Kubernetes schemas - more specific patterns
+        ["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/swagger.json"] = {
+          "k8s/**/*.yaml",
+          "kubernetes/**/*.yaml",
+          "*deployment.yaml",
+          "*service.yaml",
+          "*ingress.yaml",
+          "*configmap.yaml",
+          "*pod.yaml",
+          "*statefulset.yaml"
+        },
+        -- Keep all your existing schemas
         ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
         ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
         ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
@@ -79,6 +90,10 @@ servers.yamlls = {
         ["https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json"] =
         "*flow*.{yml,yaml}",
       },
+      schemaDownload = { enable = true },
+      validate = true,
+      hover = true,
+      completion = true,
     },
   },
 }
@@ -89,6 +104,7 @@ return {
   {
     "nvim-lspconfig",
     event = { "BufReadPost", "BufNewFile" },
+    
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     after = function()
       for server_name, config in pairs(servers) do
