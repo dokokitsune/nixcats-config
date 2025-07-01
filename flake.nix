@@ -151,7 +151,6 @@
               yaml-language-server
               yamlfmt
               yamllint
-              helm-ls 
 
               #Toml
               taplo
@@ -159,7 +158,7 @@
               #Terraform
               terraform-ls
               tflint
-
+            
               #TS/JS Json, HTML, CSS
               typescript-language-server
               vscode-langservers-extracted
@@ -173,6 +172,10 @@
               #Markdown
               marksman
               ltex-ls-plus
+
+              #SQL
+              sqls
+              sqruff
 
             ];
           };

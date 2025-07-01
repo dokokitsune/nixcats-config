@@ -3,8 +3,6 @@ local servers = {}
 servers.lua_ls = {
   Lua = {
     runtime = {
-      -- Tell the language server which version of Lua you're using
-      -- (most likely LuaJIT in the case of Neovim)
       version = "LuaJIT",
     },
     formatters = {
@@ -13,14 +11,12 @@ servers.lua_ls = {
     signatureHelp = { enabled = true },
     diagnostics = {
       disable = { "missing-fields" },
-      -- Get the language server to recognize the `vim` global
       globals = {
         "vim",
         "require",
       },
     },
     workspace = {
-      -- Make the server aware of Neovim runtime files
       library = vim.api.nvim_get_runtime_file("", true),
     },
   },
@@ -57,23 +53,11 @@ servers.ltex_plus = {
     },
   },
 }
-servers.helmls = {}
 servers.yamlls = {
   settings = {
     yaml = {
       schemas = {
-        -- Kubernetes schemas - more specific patterns
-        ["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/swagger.json"] = {
-          "k8s/**/*.yaml",
-          "kubernetes/**/*.yaml",
-          "*deployment.yaml",
-          "*service.yaml",
-          "*ingress.yaml",
-          "*configmap.yaml",
-          "*pod.yaml",
-          "*statefulset.yaml"
-        },
-        -- Keep all your existing schemas
+        kubernetes = "*.yaml",
         ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
         ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
         ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
@@ -104,7 +88,7 @@ return {
   {
     "nvim-lspconfig",
     event = { "BufReadPost", "BufNewFile" },
-    
+
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     after = function()
       for server_name, config in pairs(servers) do

@@ -27,7 +27,10 @@ return {
 
         --terraform
         nonels.builtins.formatting.terraform_fmt,
-        nonels.builtins.diagnostics.terraform_validate
+        nonels.builtins.diagnostics.terraform_validate,
+
+        --SQL
+        nonels.builtins.diagnostics.sqruff,
       }
     })
     vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, { desc = '[F]or[M]at' })
