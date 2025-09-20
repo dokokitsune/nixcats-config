@@ -127,7 +127,7 @@
               fzf
               wl-clipboard
               lazygit
-              
+
               #Bash
               bash-language-server
 
@@ -158,7 +158,7 @@
               #Terraform
               terraform-ls
               tflint
-            
+
               #TS/JS Json, HTML, CSS
               typescript-language-server
               vscode-langservers-extracted
@@ -222,7 +222,8 @@
               otter-nvim
               nvim-colorizer-lua
               obsidian-nvim
-              markview-nvim
+              markdown-nvim
+              render-markdown-nvim
               which-key-nvim
               url-open
               vim-startuptime

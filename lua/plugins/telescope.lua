@@ -1,6 +1,7 @@
 return {
   {
     "nvim-web-devicons",
+    dep_of = {"render-markdown-nvim"},
     after = function()
       require("nvim-web-devicons").setup({
         -- your configuration comes here
