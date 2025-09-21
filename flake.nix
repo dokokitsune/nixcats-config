@@ -1,5 +1,5 @@
 # Copyright (c) 2023 BirdeeHub
-# Licensed under the MIT license
+# ty Licensed under the MIT license
 
 # This is an empty nixCats config.
 # you may import this template directly into your nvim folder
@@ -144,6 +144,7 @@
               #Nix
               nixd
               nil
+              statix
               deadnix
               nixfmt-rfc-style
 
@@ -151,7 +152,7 @@
               yaml-language-server
               yamlfmt
               yamllint
-
+              
               #Toml
               taplo
 
@@ -172,6 +173,8 @@
               #Markdown
               marksman
               ltex-ls-plus
+              codespell
+              markdownlint-cli
 
               #SQL
               sqls

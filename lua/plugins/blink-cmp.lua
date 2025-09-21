@@ -7,7 +7,6 @@ return {
   {
     "blink.cmp",
     version = "1.*",
-    dep_of = { "nvim-lspconfig" },
     after = function()
       require("blink.cmp").setup({
         keymap = {
@@ -29,13 +28,28 @@ return {
         completion = {
           keyword = { range = "prefix" },
           menu = {
-            draw = { columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } } },
+            draw = {
+              columns = {
+                { "label",     "label_description", gap = 1 },
+                { "kind_icon", "kind" },
+              },
+              treesitter = { "lsp" },
+            },
           },
-          list = { selection = { preselect = true, auto_insert = true } },
+          list = {
+            selection = {
+              preselect = true,
+              auto_insert = true,
+            },
+          },
         },
-        snippets = { preset = "luasnip" },
+        snippets = {
+          preset = "luasnip",
+        },
 
-        signature = { enabled = true },
+        signature = {
+          enabled = true,
+        },
       })
     end,
   },

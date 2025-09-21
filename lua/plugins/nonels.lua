@@ -5,6 +5,12 @@ return {
     local nonels = require("null-ls")
     nonels.setup({
       sources = {
+        --Grammar
+        nonels.builtins.diagnostics.codespell,
+
+        --Markdown
+        nonels.builtins.formatting.markdownlint,
+
         --Lua
         nonels.builtins.formatting.stylua,
 
@@ -23,6 +29,7 @@ return {
         --Nix
         nonels.builtins.diagnostics.deadnix,
         nonels.builtins.formatting.nixfmt,
+        nonels.builtins.code_actions.statix,
 
 
         --terraform
