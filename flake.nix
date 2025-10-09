@@ -129,6 +129,7 @@
 
               #Bash
               bash-language-server
+              shfmt
 
               #Lua
               lua-language-server

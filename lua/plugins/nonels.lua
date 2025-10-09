@@ -22,7 +22,8 @@ return {
         nonels.builtins.formatting.prettierd,
         --  require("none-ls.diagnostics.eslint_d"),
 
-
+        --Bash
+        nonels.builtins.formatting.shfmt,
         --Yaml
         nonels.builtins.diagnostics.yamllint,
 
