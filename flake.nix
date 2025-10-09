@@ -199,7 +199,6 @@
             gitPlugins = with pkgs.neovimPlugins; [ ];
             general = with pkgs.vimPlugins; [
 
-              yazi-nvim
               git-blame-nvim
               lualine-nvim
               neo-tree-nvim
@@ -232,6 +231,7 @@
               url-open
               vim-startuptime
               dashboard-nvim
+              triptych-nvim
             ];
           };
 

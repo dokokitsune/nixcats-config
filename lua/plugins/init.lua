@@ -11,7 +11,7 @@ require("lze").load({
   { import = "plugins.notify" },
   { import = "plugins.nvim-autopairs" },
   { import = "plugins.oil" },
-  { import = "plugins.yazi" },
+  { import = "plugins.explorer" },
   { import = "plugins.trouble" },
   { import = "plugins.otter" },
   { import = "plugins.nvim-colorizer" },
