@@ -122,7 +122,6 @@
               # Runtime Deps
               ripgrep
               fd
-              yazi
               fzf
               wl-clipboard
               lazygit
@@ -229,8 +228,6 @@
               render-markdown-nvim
               which-key-nvim
               url-open
-              vim-startuptime
-              dashboard-nvim
               triptych-nvim
             ];
           };

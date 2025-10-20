@@ -22,14 +22,5 @@ return {
       vim.g.startuptime_exe_path = nixCats.packageBinPath
     end,
   },
-  {
-    "dashboard-nvim",
-  event = 'VimEnter',
-  after = function ()
-    require("dashboard").setup {
-
-    }
-  end,
-  }
   
 }

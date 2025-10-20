@@ -1,27 +1,31 @@
 local servers = {}
 
+
+
 servers.lua_ls = {
-  Lua = {
-    runtime = {
-      version = "LuaJIT",
-    },
-    formatters = {
-      ignoreComments = false,
-    },
-    signatureHelp = { enabled = true },
-    diagnostics = {
-      disable = { "missing-fields" },
-      globals = {
-        "vim",
-        "require",
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+      },
+      formatters = {
+        ignoreComments = false,
+      },
+      signatureHelp = { enabled = true },
+      diagnostics = {
+        disable = { "missing-fields" },
+        globals = {
+          "vim",
+          "require",
+        },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
       },
     },
-    workspace = {
-      library = vim.api.nvim_get_runtime_file("", true),
-    },
+    telemetry = { enabled = false },
+    filetypes = { "lua" },
   },
-  telemetry = { enabled = false },
-  filetypes = { "lua" },
 }
 
 servers.bashls = {}
@@ -84,18 +88,18 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     after = function()
-			for server_name, config in pairs(servers) do
-				vim.lsp.config(server_name, {
-					capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities),
-					settings = config.settings or config,
-					filetypes = config.filetypes,
-					cmd = config.cmd,
-					root_dir = config.root_pattern,
-				})
-			end
-			for server_name, config in pairs(servers) do
-				vim.lsp.enable(server_name)
-			end
+      textDocument = {
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true,
+        },
+      }
+      capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+      for server, config in pairs(servers) do
+        config.capabilities = vim.tbl_deep_extend("force", {}, capabilities, config.capabilities or {})
+        vim.lsp.config(server, config)
+        vim.lsp.enable(server)
+      end
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Code" })
     end,
   },
