@@ -1,7 +1,5 @@
 local servers = {}
 
-
-
 servers.lua_ls = {
   settings = {
     Lua = {
@@ -27,6 +25,7 @@ servers.lua_ls = {
     filetypes = { "lua" },
   },
 }
+
 
 servers.bashls = {}
 

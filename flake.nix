@@ -129,7 +129,7 @@
               #Bash
               bash-language-server
               shfmt
-
+              
               #Lua
               lua-language-server
               stylua
@@ -173,7 +173,7 @@
               #Markdown
               marksman
               ltex-ls-plus
-              codespell
+              codespell # Bash diagnostic as well
               markdownlint-cli
 
               #SQL
