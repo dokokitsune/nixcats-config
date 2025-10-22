@@ -150,9 +150,9 @@
 
               #Yaml
               yaml-language-server
-              yamlfmt
               yamllint
-              
+              yamlfmt
+
               #Toml
               taplo
 
@@ -171,10 +171,10 @@
               dockfmt
 
               #Markdown
-              marksman
               ltex-ls-plus
               codespell # Bash diagnostic as well
               markdownlint-cli
+              mdformat
 
               #SQL
               sqls

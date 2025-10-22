@@ -9,7 +9,7 @@ return {
         nonels.builtins.diagnostics.codespell,
 
         --Markdown
-        nonels.builtins.formatting.markdownlint,
+        nonels.builtins.formatting.mdformat,
 
         --Lua
         nonels.builtins.formatting.stylua,
@@ -19,19 +19,31 @@ return {
         nonels.builtins.diagnostics.mypy,
 
         --TS/JS
-        nonels.builtins.formatting.prettierd,
+        nonels.builtins.formatting.prettierd.with({
+          filetypes = {
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "css",
+            "json",
+            "jsonc",
+            "html",
+            "typescriptreact",
+          },
+        }),
         --  require("none-ls.diagnostics.eslint_d"),
 
         --Bash
         nonels.builtins.formatting.shfmt,
+
         --Yaml
         nonels.builtins.diagnostics.yamllint,
+        nonels.builtins.formatting.yamlfmt,
 
         --Nix
         nonels.builtins.diagnostics.deadnix,
         nonels.builtins.formatting.nixfmt,
         nonels.builtins.code_actions.statix,
-
 
         --terraform
         nonels.builtins.formatting.terraform_fmt,
@@ -39,9 +51,9 @@ return {
 
         --SQL
         nonels.builtins.diagnostics.sqruff,
-      }
+      },
     })
-    vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, { desc = '[F]or[M]at' })
-    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc= '[C]ode [A]ction'})
-  end
+    vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, { desc = "[F]or[M]at" })
+    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
+  end,
 }
