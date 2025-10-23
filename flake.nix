@@ -49,6 +49,7 @@
       self,
       nixpkgs,
       nixCats,
+      
       ...
     }@inputs:
     let
@@ -93,18 +94,18 @@
           #   (system: inputs.codeium.overlays.${system}.default)
           # )
         ];
+      
 
       # see :help nixCats.flake.outputs.categories
       # and
       # :help nixCats.flake.outputs.categoryDefinitions.scheme
-      categoryDefinitions =
+      categoryDefinitions = 
         {
           pkgs,
           settings,
           categories,
           extra,
           name,
-          mkNvimPlugin,
           ...
         }@packageDef:
         {
@@ -117,6 +118,8 @@
           # this section is for dependencies that should be available
           # at RUN TIME for plugins. Will be available to PATH within neovim terminal
           # this includes LSPs
+          
+
           lspsAndRuntimeDeps = {
             general = with pkgs; [
               # Runtime Deps
@@ -125,6 +128,10 @@
               fzf
               wl-clipboard
               lazygit
+
+              #Ansible
+              vscode-extensions.redhat.ansible
+              ansible-lint
 
               #Bash
               bash-language-server
@@ -229,6 +236,7 @@
               which-key-nvim
               url-open
               triptych-nvim
+              SchemaStore-nvim
             ];
           };
 

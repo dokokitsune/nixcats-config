@@ -1,6 +1,7 @@
 require("lze").load({
   { import = "plugins.tokyonight" },
   { import = "plugins.lualine" },
+  { import = "plugins.misc" },
   { import = "plugins.blink-cmp" },
   { import = "plugins.lsp" },
   { import = "plugins.plenary" },
@@ -18,5 +19,4 @@ require("lze").load({
   { import = "plugins.git" },
   { import = "plugins.markdown" },
   { import = "plugins.which-key" },
-  { import = "plugins.misc" },
 })

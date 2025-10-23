@@ -1,5 +1,9 @@
 local servers = {}
 
+vim.cmd.packadd("SchemaStore.nvim")
+
+
+
 servers.lua_ls = {
   settings = {
     Lua = {
@@ -25,7 +29,6 @@ servers.lua_ls = {
     filetypes = { "lua" },
   },
 }
-
 
 servers.bashls = {}
 
@@ -73,11 +76,22 @@ servers.yamlls = {
       hover = true,
       completion = true,
       schemaStore = {
-        enable = true,
-        url = "https://www.schemastore.org/json",
+        enable = false,
+        url = "",
       },
+      schemas = require('schemastore').yaml.schemas(),
     },
   },
+}
+
+servers.jsonls = {
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = true,
+    }
+  }
+
 }
 
 servers.cssls = {}

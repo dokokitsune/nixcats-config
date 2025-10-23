@@ -13,4 +13,7 @@ return {
       vim.keymap.set("n", "<leader>u", "<esc>:URLOpenUnderCursor<cr>")
     end,
   },
+  {
+    "SchemaStore.nvim"
+  },
 }
