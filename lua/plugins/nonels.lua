@@ -46,8 +46,8 @@ return {
         nonels.builtins.code_actions.statix,
 
         --terraform
-        nonels.builtins.formatting.terraform_fmt,
-        nonels.builtins.diagnostics.terraform_validate,
+        nonels.builtins.formatting.opentofu_fmt,
+        nonels.builtins.diagnostics.opentofu_validate,
 
         --SQL
         nonels.builtins.diagnostics.sqruff,

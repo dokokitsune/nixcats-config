@@ -164,7 +164,7 @@
               taplo
 
               #Terraform
-              terraform-ls
+              opentofu-ls
               tflint
 
               #TS/JS Json, HTML, CSS
