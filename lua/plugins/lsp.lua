@@ -29,14 +29,13 @@ servers.lua_ls = {
     filetypes = { "lua" },
   },
 }
-
 servers.bashls = {}
 
 servers.nixd = {}
 
 servers.nil_ls = {}
 
-servers.terraformls = {}
+servers.tofu_ls = {}
 servers.dockerls = {
   settings = {
     docker = {
