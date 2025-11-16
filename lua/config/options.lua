@@ -22,4 +22,10 @@ vim.o.cmdheight = 0
 
 vim.opt.swapfile = false -- don't use swapfiles
 
+-- Filetypes 
+vim.filetype.add({
+  extension = {
+    tofu = 'opentofu'
+  },
+})
 

@@ -164,7 +164,7 @@
               taplo
 
               #Terraform
-              opentofu-ls
+              tofu-ls
               tflint
 
               #TS/JS Json, HTML, CSS
@@ -174,7 +174,7 @@
               eslint_d
 
               #Docker
-              dockerfile-language-server-nodejs
+              dockerfile-language-server
               dockfmt
 
               #Markdown

@@ -2,8 +2,6 @@ local servers = {}
 
 vim.cmd.packadd("SchemaStore.nvim")
 
-
-
 servers.lua_ls = {
   settings = {
     Lua = {
@@ -36,6 +34,7 @@ servers.nixd = {}
 servers.nil_ls = {}
 
 servers.tofu_ls = {}
+
 servers.dockerls = {
   settings = {
     docker = {
@@ -78,7 +77,7 @@ servers.yamlls = {
         enable = false,
         url = "",
       },
-      schemas = require('schemastore').yaml.schemas(),
+      schemas = require("schemastore").yaml.schemas(),
     },
   },
 }
@@ -86,14 +85,14 @@ servers.yamlls = {
 servers.jsonls = {
   settings = {
     json = {
-      schemas = require('schemastore').json.schemas(),
+      schemas = require("schemastore").json.schemas(),
       validate = true,
-    }
-  }
-
+    },
+  },
 }
 
 servers.cssls = {}
+
 return {
   {
     "nvim-lspconfig",
