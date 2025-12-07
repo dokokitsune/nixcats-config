@@ -99,6 +99,16 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     cmd = { "LspInfo", "LspInstall", "LspUninstall" },
     after = function()
+      -- Fixes terraform/tofu semanticTokenProvider bug causing Neovim to lockup.
+      vim.api.nvim_create_autocmd("LspAttach", {
+        callback = function(args)
+          local client = vim.lsp.get_client_by_id(args.data.client_id)
+          if client and client.server_capabilities then
+            client.server_capabilities.semanticTokensProvider = nil
+          end
+        end,
+      })
+
       textDocument = {
         foldingRange = {
           dynamicRegistration = false,
